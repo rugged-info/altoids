@@ -22,7 +22,9 @@ class App extends React.Component {
   return (
     <div className="App">
       <header className="App-header">
-        <p className='App-intro'>{this.state.session}</p>
+        <p id="script">
+        <pre>{this.state.session}</pre>
+        </p>
       </header>
     </div>
   );
