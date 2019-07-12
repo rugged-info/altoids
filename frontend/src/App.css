@@ -1,29 +1,65 @@
-/* .App {
-  text-align: center;
-} */
-
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
+.App {
+  display: flex;
+  flex-direction: row
+}
+.column {
+  height: 100%;  /*allows both columns to span the full height of the browser window*/
+  display: flex;
+  flex-direction: column;  /*places the left and right headers above the bottom content*/
 }
 
-.App-header {
+#left {
+  flex-shrink: 0;  /*makes sure that content is not cut off in a smaller browser window*/
   background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+#right {
+  flex-shrink: 0;  /*makes sure that content is not cut off in a smaller browser window*/
+  background-color: #282c34;
+}
+
+.top-left {
+  margin: auto;
+  flex-shrink: 0;
+  background-color: #282c34
+}
+
+.top-left h1 {
+  color: white;
+  text-align: center
+}
+
+.top-right {
+  margin: auto;
+  flex-shrink: 0;
+  display: inline-flex;
+  background-color: #282c34
+}
+
+.top-right h1{
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+ul {
+  display: inline-flex;
+  list-style: none;
+  color: white;
 }
 
-/* #script {
-  margin: 10px ;
-  padding: 100px
-} */
+ul :hover {
+  color: green
+}
+
+.bottom {
+  flex-grow: 1;  /*ensures that the container will take up the full height of the parent container*/
+  overflow-y: auto;  /*adds scroll to this container*/
+  background-color: #282c34
+}
+
+
+#Script { 
+  margin: 0px;
+  padding: 10px;
+  background-color: #282c34;
+  color: green;
+} 
